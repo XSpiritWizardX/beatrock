@@ -1,3 +1,9 @@
 # beatrock
 
-Static React game Beat Rock with multiplayer click-to-the-beat scoring.
+Project overview goes here.
+
+## Setup
+- Add setup steps here.
+
+## Development
+- Add dev commands here.
