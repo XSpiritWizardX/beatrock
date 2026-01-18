@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: beatrock
+    env: static
+    staticPublishPath: public
+    buildCommand: mkdir -p public
+    autoDeploy: true
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: "/index.html"
