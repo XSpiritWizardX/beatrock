@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap");
 
 :root {
-  --bg: #0b0e14;
-  --surface: #141824;
-  --ink: #f2f4f8;
-  --muted: #a0a7b4;
-  --accent: #5f8bff;
-  --accent-alt: #ffb84c;
-  --glow: #1e2740;
+  --bg: #f1f7f3;
+  --surface: #ffffff;
+  --ink: #0f1a1f;
+  --muted: #5c6a6f;
+  --accent: #2a9d8f;
+  --accent-alt: #e76f51;
+  --glow: #d9efe7;
   --shadow: rgba(0, 0, 0, 0.12);
 }
 
@@ -17,7 +17,7 @@
 
 body {
   margin: 0;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--ink);
   background: radial-gradient(circle at top, var(--glow) 0%, var(--bg) 55%);
 }
