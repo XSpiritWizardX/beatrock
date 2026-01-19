@@ -15,7 +15,11 @@
       <section class="card">
         <h1>beatrock keeps your team focused.</h1>
         <p>A focused SaaS that helps teams ship faster.</p>
-        <div class="button">Join the waitlist</div>
+        <form id="waitlist-form">
+          <input type="email" name="email" placeholder="you@company.com" required />
+          <button type="submit">Join the waitlist</button>
+        </form>
+        <p id="waitlist-message"></p>
       </section>
       <section>
         <h2>Features</h2>
@@ -36,5 +40,6 @@
         </div>
       </section>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
