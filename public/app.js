@@ -1,22 +1,28 @@
-const revealItems = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-revealItems.forEach(item => revealObserver.observe(item));
+document.addEventListener('DOMContentLoaded', function() {
+  const pricingEstimator = document.querySelector('.pricing-estimator');
+  const waitlistStatus = document.querySelector('[data-waitlist-status]');
 
-const form = document.getElementById('waitlist-form');
-const message = document.getElementById('waitlist-message');
-if (form && message) {
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    message.textContent = 'You are on the list. We will be in touch soon.';
-    form.reset();
+  // Add interactivity to the range input
+  const teamSizeInput = document.getElementById('team-size');
+  teamSizeInput.addEventListener('input', function() {
+    const value = parseInt(teamSizeInput.value);
+    document.querySelector('[data-team-size]').textContent = value;
   });
-}
+
+  // Add interactivity to the checkbox
+  const billingToggle = document.getElementById('billing-toggle');
+  billingToggle.addEventListener('change', function() {
+    if (this.checked) {
+      document.querySelector('.estimator-total span[data-price]').textContent = '$96';
+    } else {
+      document.querySelector('.estimator-total span[data-price]').textContent = '$120';
+    }
+  });
+
+  // Update the waitlist status
+  pricingEstimator.addEventListener('input', function() {
+    const teamSize = parseInt(teamSizeInput.value);
+    const billing = billingToggle.checked ? 'Annual' : 'Monthly';
+    waitlistStatus.textContent = `You are on our ${billing} waitlist for a team of ${teamSize} members.`;
+  });
+});
