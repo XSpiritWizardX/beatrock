@@ -1,5 +1,5 @@
-export const moduleName = "auto_feature_11";
-export const revision = 11;
+export const moduleName = "auto_feature_21";
+export const revision = 21;
 
 export const featureBrief = {
   title: "beatrock",
