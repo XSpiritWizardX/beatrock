@@ -1,84 +1,25 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>beatrock</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <div class="page">
-      <div class="orb orb--one"></div>
-      <div class="orb orb--two"></div>
-      <div class="shell">
-        <header class="nav">
-          <div class="logo">beatrock</div>
-          <nav class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#workflow">Workflow</a>
-            <a href="#pricing">Pricing</a>
-          </nav>
-          <a class="button" href="#cta">Get Access</a>
-        </header>
-        <main>
-          <section class="hero reveal">
-            <div>
-              <span class="badge">Ship faster · stay aligned</span>
-              <h1>beatrock keeps momentum high.</h1>
-              <p>A focused product built to ship faster.</p>
-              <form id="waitlist-form">
-                <input type="email" name="email" placeholder="you@company.com" required />
-                <button class="button" type="submit">Join the waitlist</button>
-              </form>
-              <p id="waitlist-message"></p>
-            </div>
-            <div class="panel">
-              <h3>Live pulse</h3>
-              <p>Track experiments, revenue impact, and launch readiness in one view.</p>
-              <div class="stat-grid">
-                <div class="stat"><strong>3x</strong><br/>Faster rollout</div>
-                <div class="stat"><strong>12</strong><br/>Active signals</div>
-                <div class="stat"><strong>97%</strong><br/>Team clarity</div>
-              </div>
-            </div>
-          </section>
-          <section id="features" class="section reveal">
-            <h2>Features</h2>
-            <div class="grid">
-              <div class="card">Signal playbooks with owners and next actions.</div>
-              <div class="card">Sprint-ready launch checklists and guardrails.</div>
-              <div class="card">Pricing and positioning snapshots in minutes.</div>
-            </div>
-          </section>
-          <section id="workflow" class="section reveal">
-            <h2>Workflow</h2>
-            <div class="grid">
-              <div class="card">Define your goal and timeline in a single brief.</div>
-              <div class="card">Assign owners, blockers, and escalation routes.</div>
-              <div class="card">Ship with confidence and keep momentum visible.</div>
-            </div>
-          </section>
-          <section id="pricing" class="section reveal">
-            <h2>Pricing</h2>
-            <div class="grid">
-              <div class="card">Starter · $39/mo · launch playbooks</div>
-              <div class="card">Growth · $99/mo · team dashboards</div>
-              <div class="card">Scale · $249/mo · priority support</div>
-            </div>
-          </section>
-          <section id="cta" class="section reveal">
-            <div class="cta">
-              <h2>Ready to move faster?</h2>
-              <p>Join the early access list and get weekly launch guidance.</p>
-              <a class="button" href="#">Request access</a>
-            </div>
-          </section>
-        </main>
-        <footer>
-          <span>beatrock · Built for momentum</span>
-        </footer>
-      </div>
+Add a pricing estimator block with data hooks and a waitlist status element, e.g.
+
+<section id="pricing" class="pricing reveal">
+  ...
+  <div class="pricing-estimator" data-estimator>
+    <div class="estimator-row">
+      <label for="team-size">Team size</label>
+      <input type="range" id="team-size" min="1" max="200" value="10" />
+      <span class="team-size-value" data-team-size>10</span>
     </div>
-  </body>
-</html>
+    <div class="estimator-row">
+      <label class="toggle">
+        <input type="checkbox" id="billing-toggle" />
+        Annual billing (save 20%)
+      </label>
+    </div>
+    <div class="estimator-total">
+      <span data-price>$120</span>
+      <span class="per-month">per month</span>
+    </div>
+  </div>
+</section>
+
+Inside the waitlist form add:
+<div class="form-status" aria-live="polite" data-waitlist-status></div>
