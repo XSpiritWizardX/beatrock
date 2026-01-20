@@ -1,17 +1,21 @@
-.page {
-  background-color: #f2f2f2;
+body {
+  background-color: #f0f0f0;
 }
 
-.hero {
+.page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #333;
+}
+
+.hero {
+  text-align: center;
 }
 
 .reveal {
-  animation: reveal 1s forwards;
+  animation-name: reveal;
+  animation-duration: 2s;
 }
 
 @keyframes reveal {
