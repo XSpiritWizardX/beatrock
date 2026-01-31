@@ -1,220 +1,42 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>beatrock</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <div class="page">
-      <div class="orb orb--one" aria-hidden="true"></div>
-      <div class="orb orb--two" aria-hidden="true"></div>
-      <div class="gridlines" aria-hidden="true"></div>
-      <div class="shell">
-        <header class="nav">
-          <div class="logo">beatrock</div>
-          <nav class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#workflow">Workflow</a>
-            <a href="#pricing">Pricing</a>
-          </nav>
-          <a class="button" href="#cta">Get Access</a>
-        </header>
+Update the app script tag to use modules:
+<script src="app.js" type="module" defer></script>
 
-        <main>
-          <section class="hero reveal" id="top">
-            <div class="hero-text">
-              <span class="badge">Ship faster · stay aligned</span>
-              <h1>beatrock keeps momentum high.</h1>
-              <p>Build with focus. beatrock turns goals into weekly wins with a rhythm your team can feel: clarity, accountability, and decisive execution.</p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="#cta">Join the waitlist</a>
-                <a class="button button--ghost" href="#workflow">See the workflow</a>
-              </div>
-              <div class="mini-stats">
-                <div>
-                  <strong>4-day cadence</strong>
-                  <span>Plan · Build · Ship · Learn</span>
-                </div>
-                <div>
-                  <strong>Sync in minutes</strong>
-                  <span>Async updates, one voice</span>
-                </div>
-              </div>
-            </div>
-            <div class="hero-panel">
-              <div class="panel-card">
-                <div class="panel-header">
-                  <span>Today</span>
-                  <strong>Momentum Board</strong>
-                </div>
-                <div class="panel-track">
-                  <div class="track-item">
-                    <span>🎧</span>
-                    <div>
-                      <strong>Kickoff pulse</strong>
-                      <p>Goals locked, owner assigned</p>
-                    </div>
-                  </div>
-                  <div class="track-item">
-                    <span>⚡</span>
-                    <div>
-                      <strong>Build sprint</strong>
-                      <p>Top 3 deliverables in motion</p>
-                    </div>
-                  </div>
-                  <div class="track-item">
-                    <span>🧠</span>
-                    <div>
-                      <strong>Retro signal</strong>
-                      <p>Insights from the last ship</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel-footer">
-                  <span class="chip">Live</span>
-                  <span class="chip chip--muted">Week 12</span>
-                </div>
-              </div>
-              <div class="panel-wave" aria-hidden="true"></div>
-            </div>
-          </section>
-
-          <section class="features reveal" id="features">
-            <div class="section-title">
-              <p class="eyebrow">Features</p>
-              <h2>Get a beat your whole team can follow.</h2>
-            </div>
-            <div class="feature-grid">
-              <article class="feature-card">
-                <h3>Rhythm Sprints</h3>
-                <p>Fixed-length cycles keep shipping predictable and sustainable without the burnout.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Signal Dashboards</h3>
-                <p>Track goals, blockers, and shipping confidence in a single view.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Async Pulse</h3>
-                <p>Lightweight updates summarize progress so meetings stay rare and short.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Momentum Score</h3>
-                <p>Measure team energy and performance with a clear, shared metric.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="workflow reveal" id="workflow">
-            <div class="section-title">
-              <p class="eyebrow">Workflow</p>
-              <h2>One loop, four moves.</h2>
-            </div>
-            <div class="workflow-steps">
-              <div class="step">
-                <span class="step-number">01</span>
-                <div>
-                  <h3>Align</h3>
-                  <p>Set the weekly outcomes and define the quality bar.</p>
-                </div>
-              </div>
-              <div class="step">
-                <span class="step-number">02</span>
-                <div>
-                  <h3>Build</h3>
-                  <p>Ship in focused blocks with a visible scope boundary.</p>
-                </div>
-              </div>
-              <div class="step">
-                <span class="step-number">03</span>
-                <div>
-                  <h3>Ship</h3>
-                  <p>Launch to customers with release notes generated for you.</p>
-                </div>
-              </div>
-              <div class="step">
-                <span class="step-number">04</span>
-                <div>
-                  <h3>Learn</h3>
-                  <p>Capture insights and roll directly into the next loop.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="pricing reveal" id="pricing">
-            <div class="section-title">
-              <p class="eyebrow">Pricing</p>
-              <h2>Plans for teams ready to move.</h2>
-            </div>
-            <div class="pricing-grid">
-              <div class="price-card">
-                <h3>Launch</h3>
-                <p class="price">$12<span>/seat</span></p>
-                <ul>
-                  <li>Weekly rhythm boards</li>
-                  <li>Async pulse updates</li>
-                  <li>3 integrations</li>
-                </ul>
-                <a class="button button--ghost" href="#cta">Start here</a>
-              </div>
-              <div class="price-card price-card--featured">
-                <div class="ribbon">Most Popular</div>
-                <h3>Momentum</h3>
-                <p class="price">$24<span>/seat</span></p>
-                <ul>
-                  <li>Everything in Launch</li>
-                  <li>Signal dashboards</li>
-                  <li>Release notes automation</li>
-                </ul>
-                <a class="button button--primary" href="#cta">Get momentum</a>
-              </div>
-              <div class="price-card">
-                <h3>Studio</h3>
-                <p class="price">Custom</p>
-                <ul>
-                  <li>Dedicated success lead</li>
-                  <li>Advanced analytics</li>
-                  <li>On-site enablement</li>
-                </ul>
-                <a class="button button--ghost" href="#cta">Talk to us</a>
-              </div>
-            </div>
-          </section>
-
-          <section class="cta reveal" id="cta">
-            <div class="cta-card">
-              <div>
-                <h2>Stay in the loop.</h2>
-                <p>Join the waitlist for early access, private betas, and launch perks.</p>
-              </div>
-              <form class="waitlist" id="waitlist-form">
-                <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" />
-                <input type="email" id="email" name="email" placeholder="Work email" autocomplete="email" required />
-                <button type="submit" class="button button--primary">Request access</button>
-                <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
-                <div class="waitlist-meta">
-                  <span id="waitlist-count">2,184 teams waiting</span>
-                  <span class="divider">•</span>
-                  <span>Early access in waves</span>
-                </div>
-              </form>
-            </div>
-          </section>
-        </main>
-
-        <footer class="footer">
-          <p>© 2026 beatrock. Built for product teams that ship with intention.</p>
-          <div class="footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
-          </div>
-        </footer>
+Insert this section in the Pricing area (after the existing pricing cards):
+<section class="pricing-builder reveal" id="pricing-builder" aria-labelledby="pricing-builder-title">
+  <div class="section-head">
+    <span class="eyebrow">Pricing Builder</span>
+    <h2 id="pricing-builder-title">Find the right plan in 20 seconds.</h2>
+    <p>Choose your team size and billing cycle to see your real price and savings.</p>
+  </div>
+  <div class="builder-card">
+    <div class="builder-controls">
+      <label class="field">
+        <span>Team size</span>
+        <div class="range-wrap">
+          <input type="range" min="1" max="50" step="1" value="8" id="seatCount" />
+          <output id="seatValue" for="seatCount">8</output>
+        </div>
+      </label>
+      <fieldset class="billing-toggle" aria-label="Billing cycle">
+        <label><input type="radio" name="billing" value="monthly" checked />Monthly</label>
+        <label><input type="radio" name="billing" value="annual" />Annual (save)</label>
+      </fieldset>
+      <button class="button button--ghost" id="sharePricing" type="button">Copy share link</button>
+    </div>
+    <div class="builder-results" aria-live="polite">
+      <div class="result-card">
+        <span class="label">Recommended plan</span>
+        <strong data-plan-name>Team</strong>
+      </div>
+      <div class="result-card">
+        <span class="label">Per seat</span>
+        <strong data-per-seat>$29</strong>
+      </div>
+      <div class="result-card">
+        <span class="label">Total</span>
+        <strong data-plan-total>$232</strong>
+        <small data-plan-savings>Save $0</small>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</section>
